@@ -1,2 +1,2 @@
-# COMP-352
-Some coursework for Data Structures &amp; Algorithms
+# Misc-Coursework
+Some coursework from Data Structures & Algorithms
