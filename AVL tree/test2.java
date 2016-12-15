@@ -3,7 +3,7 @@ import java.io.*;
 
 
 
-class FileData{
+class FileData2{
 /** Class: FileData
  *  Contains the content of a record found in the input file. Each 
  *  FileData object contains exactly one record. An object of this
@@ -23,7 +23,7 @@ class FileData{
 	String keywords[];
 
 	/* Constructor */
-	FileData(int id, String title, String author, int keywordCount){
+	FileData2(int id, String title, String author, int keywordCount){
 		this.id=id;
 		this.title=title;
 		this.author=author;
@@ -51,10 +51,10 @@ class FileData{
 	}
 
 }
-class test{
+class test2{
 
     BufferedReader b;
-    bst a;
+    AVL a;
 
 	/* Returns the next data record (a whole record object)
 	 * in the data input file. Returns null if there
@@ -97,10 +97,10 @@ class test{
 		}
 	}
 
-    public test(String filename){
+    public test2(String filename){
        try{
 
-           this.a = new bst();
+           this.a = new AVL();
            this.b = new BufferedReader(new FileReader(filename));
             
            /* READS DATAFILE.TXT INTO DATASTRUCTURE  */
@@ -127,20 +127,15 @@ class test{
 
     public static void main(String[] args){
 
-            test T = new test("datafile.txt"); // THIS WILL CREATE YOUR BST AND FILL IT WITH THE INFORMATION FROM THE DATAFILE
+            test2 T = new test2("datafile.txt"); // THIS WILL CREATE YOUR BST AND FILL IT WITH THE INFORMATION FROM THE DATAFILE
             
             /* This line of code should return the first record in the linked list for a given keyword.
              * It may be useful for your personal debugging
              */ 
-            T.a.get_records("medical" /*Insert keyword to be found here. "medical" is an example*/).print();
+            T.a.get_records("learning" /*Insert keyword to be found here. "medical" is an example*/).print();
 
             
             T.a.print(); // Prints titles of all elements in the bst sorted by keyword.
-            
-            T.a.delete("medical");
-            T.a.delete("learning");
-            T.a.delete("concepts");
-            
             T.a.print(); //Prints bst after the 3 deletions
             // THIS AREA IS FOR YOUR USE TO HELP TEST THAT YOUR BST WORKS
     }
